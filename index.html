@@ -20,11 +20,18 @@
             <div class="container">
                 <!-- Lista  -->
                 <ul class="todolist">
-                    <li @click="toggleDone(index)" v-for="(lista,index) in list" class="list_item" :class="{check:list[index].done}" >
+                    <!-- Elemento Lista  -->
+                    <li @click="toggleDone(index)" v-for="(lista,index) in list" class="list_item" :class="{check:list[index].done}">
                         {{list[index].text}}
-                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-minus":class="{check:false}" @click="removeListItem(index)"></i>
                     </li>
+                    <!-- /Elemento Lista  -->
                 </ul>
+                <!-- Messaggio nessun Task -->
+                <div v-if="list.length === 0" class="alert_no_list">
+                    Non ci sono task nella lista.
+                </div>
+                <!-- /Messaggio nessun Task -->
                 <!-- /Lista  -->
             </div>
         </main>

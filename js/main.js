@@ -23,8 +23,13 @@ createApp({
     }
   },
   methods:{
+    // Toggle 
     toggleDone(index) {
-        this.list[index].done = !this.list[index].done;
-    }  
+        this.list[index].done=!this.list[index].done;
+    },
+    // Remove List
+    removeListItem(index) {
+        this.list.splice(index, 1);
+    } 
 }
 }).mount('#app');

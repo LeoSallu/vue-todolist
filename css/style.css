@@ -21,6 +21,7 @@ Common
     margin: .1875rem;
     background-color: white;
     padding: .625rem;
+    cursor: pointer;
 }
 .check{
     text-decoration: line-through;
@@ -50,3 +51,8 @@ List
 .list_item i{
     cursor: pointer;
 } 
+.alert_no_list{
+    text-align: center;
+    font-weight: bold;
+    color: yellow;
+}
