@@ -23,11 +23,8 @@ createApp({
     }
   },
   methods:{
-    test(){
-        console.log(this.list[0].done);
-    }
-  },
-  mounted(){
-    this.test();
-  }
+    toggleDone(index) {
+        this.list[index].done = !this.list[index].done;
+    }  
+}
 }).mount('#app');

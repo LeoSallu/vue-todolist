@@ -20,11 +20,7 @@
             <div class="container">
                 <!-- Lista  -->
                 <ul class="todolist">
-                    <li v-if="list.done===false" v-for="(lista,index) in list" class="list_item">
-                        {{list[index].text}}
-                        <i class="fa-solid fa-minus"></i>
-                    </li>
-                    <li v-else v-for="(lista,index) in list" class="list_item check">
+                    <li @click="toggleDone(index)" v-for="(lista,index) in list" class="list_item" :class="{check:list[index].done}" >
                         {{list[index].text}}
                         <i class="fa-solid fa-minus"></i>
                     </li>
