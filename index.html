@@ -20,7 +20,14 @@
             <div class="container">
                 <!-- Lista  -->
                 <ul class="todolist">
-                    <li v-for="(lista,index) in list">{{list[index].text}}</li>
+                    <li v-if="list.done===false" v-for="(lista,index) in list" class="list_item">
+                        {{list[index].text}}
+                        <i class="fa-solid fa-minus"></i>
+                    </li>
+                    <li v-else v-for="(lista,index) in list" class="list_item check">
+                        {{list[index].text}}
+                        <i class="fa-solid fa-minus"></i>
+                    </li>
                 </ul>
                 <!-- /Lista  -->
             </div>

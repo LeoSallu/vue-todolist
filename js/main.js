@@ -18,8 +18,16 @@ createApp({
             {
                 text:'Studiare Vue',
                 done: true        
-            }
-        ]
+            }   
+             ]
     }
+  },
+  methods:{
+    test(){
+        console.log(this.list[0].done);
+    }
+  },
+  mounted(){
+    this.test();
   }
 }).mount('#app');

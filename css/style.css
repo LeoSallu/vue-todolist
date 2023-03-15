@@ -17,9 +17,13 @@ Common
     color: green;
 }
 .todolist li{
-    border: 1px solid blue;
+    border: 2px solid blue;
+    margin: .1875rem;
     background-color: white;
     padding: .625rem;
+}
+.check{
+    text-decoration: line-through;
 }
 /*
 Main  
@@ -35,3 +39,14 @@ header h1{
     border: 1px solid black;
     padding: 1.25rem;
 }
+/* 
+List  
+*/
+.list_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list_item i{
+    cursor: pointer;
+} 
