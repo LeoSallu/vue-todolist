@@ -9,6 +9,9 @@ Reset
 /*
 Common  
 */
+[v-cloak] {
+    display: none;
+  }  
 .todolist{
     list-style: none;
     color: green;
