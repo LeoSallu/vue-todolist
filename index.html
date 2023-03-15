@@ -18,7 +18,12 @@
         </header>
         <main>
             <div class="container">
-                <!-- Lista  -->
+            <!-- Form per aggiungere nuovo todo -->
+            <div class="add_list_item">
+                <input type="text" v-model="newTask" @keydown.enter="addTask" placeholder="Aggiungi nuovo Task">
+                <button @click="addTask">Aggiungi</button>
+            </div>
+            <!-- Lista  -->
                 <ul class="todolist">
                     <!-- Elemento Lista  -->
                     <li @click="toggleDone(index)" v-for="(lista,index) in list" class="list_item" :class="{check:list[index].done}">
@@ -32,15 +37,14 @@
                     Non ci sono task nella lista.
                 </div>
                 <!-- /Messaggio nessun Task -->
-                <!-- /Lista  -->
+            <!-- /Lista  -->
             </div>
         </main>
-
     </div>
-    <!-- App Vue  -->
-    <!-- vue -->
+    <!-- /App Vue  -->
+    <!-- VUE CDN-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- my js  -->
+    <!-- My JS -->
     <script src="js/main.js"></script>  
 </body>
 </html>

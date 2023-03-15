@@ -9,17 +9,18 @@ createApp({
         list:[
             {
                 text:'Fare la spesa',
-                done: true        
+                done: false        
             },
             {
                 text:'Lavare la macchina',
-                done: true        
+                done: false        
             },
             {
                 text:'Studiare Vue',
-                done: true        
+                done: false        
             }   
-             ]
+             ],
+        newTask:''
     }
   },
   methods:{
@@ -30,6 +31,13 @@ createApp({
     // Remove List
     removeListItem(index) {
         this.list.splice(index, 1);
-    } 
+    },
+    // Add New Task
+    addTask() {
+        if (this.newTask.trim() !== '') {
+            this.list.push({ text: this.newTask, done: false });
+            this.newTask = '';
+        }
+    }
 }
 }).mount('#app');

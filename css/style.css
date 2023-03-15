@@ -56,3 +56,9 @@ List
     font-weight: bold;
     color: yellow;
 }
+.add_list_item{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin-bottom: 10px;
+}
