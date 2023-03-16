@@ -32,7 +32,7 @@
                     <!-- Elemento Lista  -->
                     <li @click="toggleDone(index)" v-for="(lista,index) in list" class="list_item" :class="{check:list[index].done}">
                         {{list[index].text}}
-                        <i class="fa-solid fa-minus":class="{check:false}" @click="removeListItem(index)"></i>
+                        <i class="fa-solid fa-minus":class="{check:false}" @click.stop="removeListItem(index)"></i>
                     </li>
                     <!-- /Elemento Lista  -->
                 </ul>
